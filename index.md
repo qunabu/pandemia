@@ -16,7 +16,7 @@ The [simulation](https://qunabu.github.io/covid-simulation/) is quite straight f
 
 ### Variables 
 
-#### Default variables* 
+#### Default variables
 
 * `amount` number of balls on the stage 
 * `width` width of the stage in pixels
