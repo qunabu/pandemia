@@ -18,8 +18,8 @@ email: mateusz@wojczal.com
 description: >- # this means to ignore newlines until "baseurl:"
   Dummy pandemia simulation. This page is intended to show the results 
   of variables that affect the spread and control of the pandemia. 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/pandemia" # the subpath of your site, e.g. /blog
+url: "https://qunabu.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  qunabu
 
 # Build settings
