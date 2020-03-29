@@ -6,9 +6,6 @@ layout: home
 ---
 
 
-## Introduction 
-
-bla bla bla
 
 
 
