@@ -5,17 +5,17 @@
 layout: home
 ---
 
+# Introduction 
 
+bla bla bla
 
-
-
-### Simulations 
+## Simulations 
 
 bla bla bla
 
 
 
-#### Simple
+### Simple
 
 Simple simulation. 300 people, propability of infection is 100% same is propability of that infection will convert to sickness. Fatality ratio is 2% regardless of age. 
 
@@ -27,7 +27,7 @@ Simple simulation. 300 people, propability of infection is 100% same is propabil
 
 
 
-#### Age structure 
+### Age structure 
 
 This simulation has a different fatality ratio based on the age. Age structure is normalized 
 
