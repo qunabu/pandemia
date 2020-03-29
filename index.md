@@ -34,7 +34,7 @@ The [simulation](https://qunabu.github.io/covid-simulation/) is quite straight f
 * `distrAge79` "Percentage of age 70-79 distribition from whole population"
 * `distrAge100` "Percentage of age 80-100 distribition from whole population"
 
-0-9 3% means that from the whole population 3% has age between 0 to 9 (including 9) and so on. The reason to have age in the simulatio is that fatality ratio is different for each range. All the percenage is sum must eqals 100% 
+Value `0.03` for `distrAge9` means that from the whole population 3% has age between 0 to 9 (including 9) and so on. The reason to have age in the simulatio is that fatality ratio is different for each range. All the percenage is sum must eqals 1 (which is 100%).
 
 #### Fatality ratio
 
@@ -48,7 +48,7 @@ The [simulation](https://qunabu.github.io/covid-simulation/) is quite straight f
 * `fatalAge79` "Percentage chance of fatal sickness of age 70-79 distribition from whole population"
 * `fatalAge100` "Percentage chance of fatal sickness of age 80-100 distribition from whole population"
 
-0-9 3% 0.002% means that person with age in that range has 0.002% change of fatal sickenes, person aged more the 80 has 9.3% change of fatal sickenes.
+Value `0.002%` for `fatalAge9` means that person with age in that range has 0.002% change of fatal sickenes, person aged more the 80 has 9.3% change of fatal sickenes, etc. 
 
 #### Infection variables
 
