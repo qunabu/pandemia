@@ -8,21 +8,21 @@ title: Hello Infected World
 
 # Introduction 
 
-bla bla bla
+bla bla bla, some text will come here sooner or later
 
 ## Simulations 
 
-The simulation is quite straight forward and it is being rendered by the following variables 
+The [simulation](https://qunabu.github.io/covid-simulation/) is quite straight forward and it is being rendered by the following variables
 
 ### Variables 
 
-*Default variables* 
+#### Default variables* 
 
 * `amount` number of balls on the stage 
 * `width` width of the stage in pixels
 * `height` height of the stage in pixels
 
-*Age structure* 
+#### Age structure
 
 * `distrAge9` "Percentage of age 0-9 distribition from whole population"
 * `distrAge19` "Percentage of age 10-19 distribition from whole population"
@@ -36,7 +36,7 @@ The simulation is quite straight forward and it is being rendered by the followi
 
 0-9 3% means that from the whole population 3% has age between 0 to 9 (including 9) and so on. The reason to have age in the simulatio is that fatality ratio is different for each range. All the percenage is sum must eqals 100% 
 
-*Fatality ratio*
+#### Fatality ratio
 
 * `fatalAge9` "Percentage chance of fatal sickness of age 0-9 distribition from whole population"
 * `fatalAge19` "Percentage chance of fatal sickness of age 10-19 distribition from whole population"
@@ -50,20 +50,21 @@ The simulation is quite straight forward and it is being rendered by the followi
 
 0-9 3% 0.002% means that person with age in that range has 0.002% change of fatal sickenes, person aged more the 80 has 9.3% change of fatal sickenes.
 
-*Infection variables*
+#### Infection variables
+
 * `percInfected` "Percentage of initialy infected", eg 0.03 means that for 100 balls 3 will be infected at the beginning of the simulation 
 * `probInfection` "Propability that one ball will infect another in case of collision"
 * `probInfectionSick` "Propability that infection will convert to sickness"
 * `cyclesToRecoverOrDie` "number of cycles to recover or fatal sickness"
 * `cyclesInterval` "time of each cycle in ms"
 
-*Level of hygiene*
+#### Level of hygiene
 
 * `casual` = `1.5`  "Casual - No one washing their hands"
 * `normal` = `1` "Normal - 67,3% of pepole washing hands"
 * `brutal` = `0.8` "Brutal - Compulsive hand washing"
  
- *Quarantine*
+#### Quarantine
  
 * `quarantineWalls` "number of walls" number of walls that stage will be divided by. 
 * `quarantineNotMove` "Percentage of balls that are not moving", Number of balls that will not move during the whole simulation. eg 0.03 means that from 100 balls 3 will not move. 
@@ -75,7 +76,7 @@ The simulation is quite straight forward and it is being rendered by the followi
 
 Most calculations are based on the `cycle`, every numer of miliseconds new cycle is triggered, this is controlled that `cyclesInterval` variable, eg value 100 means that each cycle is trigger for every 100ms
 
-*Infection*
+#### Infection
 
 If `sick` or `infected` ball confronts (ball collide with another) the `healthy` one the change of being infected is caluclated with the formula 
 
@@ -85,7 +86,7 @@ if (Math.random() < probInfection * hygieneLevel) {
 }
 ```
 
-*Infected to get sick* 
+#### Infected to get sick
 
 Once ball is `infected` it starts its own cycle counter, each cycle it increments its value by one. The formula checks if both conditiona are true 
 1. ball counter is bigger then `cyclesToRecoverOrDie` and `Math.random()` is higher then `0.8`
@@ -100,10 +101,25 @@ if ( tick++ > cyclesToRecoverOrDie && Math.random() > 0.8 ) {
 }
 ```
 
-*Sick to die or recover 
+#### Sick to die or recover 
+
+Once ball is `sick` it starts its own cycle counter (back to 0), each cycle it increments its value by one. The formula checks if both conditiona are true. `probFatality` is taken from `fatalAgeX` based on the `age` of the ball. 
+1. ball counter is bigger then `cyclesToRecoverOrDie` and `Math.random()` is higher then `0.8`
+2. `Math.random()` is lower then `probFatality` then ball change state to `dead` othewise to `recovered`
+then ball is `sick` from now 
 
 
+```
+if ( tick++ > cyclesToRecoverOrDie && Math.random() > 0.8) {
+ state = Math.random() < probFatality ? STATES.dead : STATES.recovered;
+}    
+```
 
+### Start (and restart) 
+
+Every time simulation starts it draw from the config variables.
+
+## Examples
 
 #### Simple
 
