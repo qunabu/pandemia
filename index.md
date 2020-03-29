@@ -154,6 +154,25 @@ This simulation has a different fatality ratio based on the age. Age structure i
 <iframe src="https://qunabu.github.io/covid-simulation/?width=1024&height=509&amount=289&quarantineWalls=0&quarantineNotMove=0&iframe=1" width="1050" height="649"></iframe>
 {% endraw %}
 
+#### Soft quarantine 
 
+{% raw %}
+<iframe src="https://qunabu.github.io/covid-simulation/?width=1024&height=485&amount=282&iframe=1" width="1050" height="625"></iframe>
+{% endraw %}
 
+#### Strong quarantine (low density)
+
+282 balls 
+
+{% raw %}
+<iframe src="https://qunabu.github.io/covid-simulation/?width=1024&height=485&amount=282&quarantineWalls=2&quarantineNotMove=0.446&iframe=1" width="1050" height="625"></iframe>
+{% endraw %}
+
+#### Strong quarantine (high density)
+
+545 balls 
+
+{% raw %}
+<iframe src="https://qunabu.github.io/covid-simulation/?width=1024&height=485&amount=545&quarantineWalls=2&quarantineNotMove=0.446&iframe=1" width="1050" height="625"></iframe>
+{% endraw %}
 
