@@ -21,6 +21,7 @@ The [simulation](https://qunabu.github.io/covid-simulation/) is quite straight f
 * `amount` number of balls on the stage 
 * `width` width of the stage in pixels
 * `height` height of the stage in pixels
+* `cyclesInterval` numer of miliseconds new cycle is triggered eg value 100 means that each cycle is trigger for every 100ms
 
 #### Age structure
 
