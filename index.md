@@ -8,7 +8,7 @@ title: Hello Infected World
 
 # Introduction 
 
-bla bla bla, some text will come here sooner or later
+Whole idea come from [Washing Post article](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/) that come with simple simulation. My idea was to explore this simulation for more options and even allow user to manipulate config values. 
 
 ## Simulations 
 
