@@ -10,15 +10,18 @@ title: Hello Infected World
 
 Whole idea come from [Washing Post article](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/) that provided simple simulation. My idea was to explore this simulation for more options and even allow user to manipulate configuration values. 
 
+*Since I don't have any copywriting skills I need __your help__ writing this article.*
+
+
 ## Simulations 
 
-The [simulation](https://qunabu.github.io/covid-simulation/) is quite straight forward and it is being rendered by the [variables](config)
+The [simulation](https://qunabu.github.io/covid-simulation/) is quite straight forward and it is being rendered by the [variables](config). You are more then welcome to [play with them on your own](https://qunabu.github.io/covid-simulation/).
 
 ## Examples
 
 #### Simple
 
-Simple simulation. 300 people, probability of infection is 100% same is probability of that infection will convert to sickness. Fatality ratio is 2% regardless of age. 
+Simple simulation. 300 balls, probability of infection is 100% same is probability of that infection will convert to sickness. Fatality ratio is 2% regardless of age. 
 
 {% raw %}
 <iframe src="https://qunabu.github.io/covid-simulation/?width=1024&height=509&amount=300&probInfection=1&probInfectionSick=1&fatalAge9=0.002&fatalAge19=0.002&fatalAge29=0.002&fatalAge39=0.002&fatalAge49=0.002&fatalAge59=0.002&fatalAge69=0.002&fatalAge79=0.002&fatalAge100=0.002&quarantineWalls=0&quarantineNotMove=0&iframe=1" width="1050" height="649"></iframe>
@@ -72,4 +75,6 @@ This simulation has a different fatality ratio based on the age. Age structure i
 
 
 # MORE EXAMPLES ARE NEEDED - PLEASE HELP!!!
+
+Since I don't have any copywriting skills I need your help with writing this article. 
 
